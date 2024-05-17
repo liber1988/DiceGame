@@ -1,0 +1,167 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: row;
+  background-color: blanchedalmond;
+  font-family: Arial, Helvetica, sans-serif;
+  justify-content: center;
+}
+.player-1 {
+  height: 100vh;
+  width: 30vw;
+  background-color: rgb(226, 120, 120);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.player-1 h1 {
+  display: none;
+}
+.player-2 {
+  height: 100vh;
+  width: 30vw;
+  background-color: rgb(150, 116, 116);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.player-2 h1 {
+  display: none;
+}
+
+.players-font-size {
+  padding: 30px 0 0 0;
+  font-size: 40px;
+  font-weight: bold;
+}
+.score {
+  font-size: 50px;
+  font-weight: bold;
+  text-align: center;
+}
+.current-score {
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  color: aliceblue;
+  height: 10vh;
+  width: 10vw;
+  background-color: rgb(228, 131, 12);
+  margin-bottom: 70px;
+}
+
+.middle-layer {
+  position: absolute;
+  transform: translate(-50%, 0);
+  left: 50%;
+  width: 10vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+button {
+  background-color: #4bbd2f;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #5bd613;
+}
+
+button:active {
+  background-color: #367c39;
+  transform: translateY(2px);
+}
+#slider {
+  width: 100%;
+  overflow: hidden;
+}
+
+#slider img {
+  border-radius: 5px;
+  width: 100%;
+  display: none;
+}
+
+#slider img.active {
+  display: block;
+}
+
+.container {
+  width: 100px;
+  margin-top: 10px;
+}
+
+.dice-position {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+li {
+  padding: 5px;
+}
+.rool-dice-hold-buttons {
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#input-container {
+  background-color: #b8820f;
+  padding: 20px;
+  border-radius: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.9;
+}
+
+#input-container.hidden {
+  display: none;
+}
+#input-container h2 {
+  padding-top: 50px;
+}
+#input-container h1 {
+  padding-bottom: 50px;
+}
+#submit-button {
+  margin-top: 50px;
+  position: relative;
+}
+
+#number-input {
+  text-align: center;
+  font-size: 24px;
+}
+
+ol {
+  list-style-type: disc;
+}
