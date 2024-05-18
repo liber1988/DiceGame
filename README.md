@@ -65,14 +65,14 @@ The game has 2 players, playing in rounds. The objective is to be the first play
 
 - `index.html`: The main HTML file to open in your browser.
 - `style.css`: Stylesheet for the game.
-- `app.js`: JavaScript file containing the game logic.
+- `music/`: Folder contains music files.
 - `images/`: Folder containing the dice images.
 
 ## Getting Started
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/yourusername/dice-game.git
+   git clone https://github.com/liber1988/DiceGame/.git
    ```
 2. **Navigate to the project directory**:
    ```bash

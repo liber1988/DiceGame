@@ -89,11 +89,33 @@ button {
   font-size: 16px;
   border-radius: 10px;
   cursor: pointer;
+  overflow: hidden;
   transition: background-color 0.3s ease;
+  position: relative;
 }
-
+button:focus {
+  outline: none;
+}
 button:hover {
   background-color: #5bd613;
+}
+
+button .circle {
+  top: 27px;
+  left: 8;
+  position: absolute;
+  background-color: white;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  animation: scale 0.5s ease-out;
+}
+@keyframes scale {
+  to {
+    transform: translate(-50%, -50%) scale(3);
+    opacity: 0.1;
+  }
 }
 
 button:active {

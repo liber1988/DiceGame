@@ -15,6 +15,28 @@ const targetScoreInput = document.getElementById("number-input");
 const allButtons = document.querySelectorAll("button:not(#specialButton)");
 const backgroundMusic = document.getElementById("backgroundMusic");
 const soundIcon = document.getElementById("soundIcon");
+const buttons = document.querySelectorAll(".ripple");
+
+buttons.forEach((button) => {
+  button.addEventListener("click", function (e) {
+    const x = e.clientX;
+    const y = e.clientY;
+
+    const buttonTop = e.target.offsetTop;
+    const buttonLeft = e.target.offsetTop;
+
+    const xInside = x - buttonLeft;
+    const yInside = y - buttonTop;
+
+    const circle = document.createElement("span");
+    circle.classList.add("circle");
+    circle.style.top = yInside + "px";
+    circle.style.left = xInside + "px";
+
+    this.appendChild(circle);
+    setTimeout(() => circle.remove(), 500);
+  });
+});
 let musicPlaying = false;
 
 function toggleSound() {
@@ -116,13 +138,13 @@ function checkTotalScore() {
     Number(player1TotalScore.textContent) === WINSCORE
   ) {
     youWon(changePlayerValue);
-    return true;
+    return 0;
   } else if (
     Number(player2TotalScore.textContent) > WINSCORE ||
     Number(player1TotalScore.textContent) > WINSCORE
   ) {
     youWon(!changePlayerValue);
-    return true;
+    return 0;
   }
 }
 
@@ -189,9 +211,6 @@ async function ai() {
   changePlayer();
   let randomTries = Math.floor(Math.random() * 5);
   for (i = 0; i <= randomTries; i++) {
-    if (checkTotalScore()) {
-      break;
-    }
     await new Promise((resolve) => setTimeout(resolve, 2000));
     RollDiceFunc();
   }

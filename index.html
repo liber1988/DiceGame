@@ -44,10 +44,14 @@
       </div>
     </div>
     <div class="middle-layer">
-      <button onclick="refreshPage()" class="new-game" id="specialButton">
+      <button
+        onclick="refreshPage()"
+        class="new-game ripple"
+        id="specialButton"
+      >
         NEW GAME
       </button>
-      <button onclick="ai()" class="Ai-game" id="AiButton">AI</button>
+      <button onclick="ai()" class="Ai-game ripple" id="AiButton">AI</button>
       <div class="dice-position">
         <div class="container">
           <div id="slider">
@@ -61,8 +65,10 @@
         </div>
       </div>
       <div class="rool-dice-hold-buttons">
-        <button onclick="RollDiceFunc()" id="changeDice">ROLL DICE</button>
-        <button id="hold">HOLD</button>
+        <button onclick="RollDiceFunc()" id="changeDice" class="ripple">
+          ROLL DICE
+        </button>
+        <button id="hold" class="ripple">HOLD</button>
       </div>
     </div>
     <div id="input-container">
@@ -93,7 +99,7 @@
         id="number-input"
         placeholder="Enter a Target score"
       />
-      <button id="submit-button">Submit</button>
+      <button id="submit-button" class="ripple">Submit</button>
     </div>
     <script src="sctipt.js"></script>
   </body>
