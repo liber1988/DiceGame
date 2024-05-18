@@ -1,6 +1,6 @@
 const picture1 = document.getElementById("picture1");
 const picture2 = document.getElementById("picture2");
-const changeDice = document.getElementById("changeDice");
+const RollDice = document.getElementById("changeDice");
 const player1Score = document.getElementById("player-1-score");
 const player2Score = document.getElementById("player-2-score");
 const player1TotalScore = document.getElementById("player-1-total-score");
@@ -116,11 +116,13 @@ function checkTotalScore() {
     Number(player1TotalScore.textContent) === WINSCORE
   ) {
     youWon(changePlayerValue);
+    return true;
   } else if (
     Number(player2TotalScore.textContent) > WINSCORE ||
     Number(player1TotalScore.textContent) > WINSCORE
   ) {
     youWon(!changePlayerValue);
+    return true;
   }
 }
 
@@ -157,11 +159,9 @@ function changePlayer() {
     player2[0].style.opacity = 0.6;
   }
   changePlayerValue = !changePlayerValue;
-  console.log(WINSCORE);
   return changePlayerValue;
 }
-
-changeDice.addEventListener("click", () => {
+function RollDiceFunc() {
   const [num1, num2] = getRandomPictures();
   const backgroundMusic = document.getElementById("diceRollBackgroundMusic");
   backgroundMusic.play();
@@ -173,7 +173,7 @@ changeDice.addEventListener("click", () => {
     updatePlayer2(num1, num2);
     checkTotalScore();
   }
-});
+}
 
 buttonChangePlayerValue.addEventListener("click", () => {
   changePlayer();
@@ -181,4 +181,17 @@ buttonChangePlayerValue.addEventListener("click", () => {
 
 function refreshPage() {
   location.reload();
+}
+
+async function ai() {
+  changePlayer();
+  let randomTries = Math.floor(Math.random() * 5);
+  for (i = 0; i <= randomTries; i++) {
+    if (checkTotalScore()) {
+      break;
+    }
+    await new Promise((resolve) => setTimeout(resolve, 1000));
+    RollDiceFunc();
+  }
+  changePlayer();
 }
