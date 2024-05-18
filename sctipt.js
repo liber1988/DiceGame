@@ -13,7 +13,6 @@ const inputContainer = document.getElementById("input-container");
 const submitButton = document.getElementById("submit-button");
 const targetScoreInput = document.getElementById("number-input");
 const allButtons = document.querySelectorAll("button:not(#specialButton)");
-
 const backgroundMusic = document.getElementById("backgroundMusic");
 const soundIcon = document.getElementById("soundIcon");
 let musicPlaying = false;
@@ -72,6 +71,7 @@ function updateTargetScoreValue() {
   const targetScoreValue = Number(targetScoreInput.value);
   WINSCORE = targetScoreValue;
 }
+
 submitButton.addEventListener("click", () => {
   inputContainer.classList.add("hidden");
   updateTargetScoreValue();
@@ -129,6 +129,7 @@ function checkTotalScore() {
 function updatePlayer1(num1, num2) {
   if (num1 + 1 === ZERONUM && num2 + 1 === ZERONUM) {
     player1Score.textContent = num1 + num2 + 2;
+    showDoubleSixMessage();
     player1TotalScore.textContent = "0";
   } else {
     player1Score.textContent = num1 + num2 + 2;
@@ -140,6 +141,7 @@ function updatePlayer1(num1, num2) {
 function updatePlayer2(num1, num2) {
   if (num1 + 1 === ZERONUM && num2 + 1 === ZERONUM) {
     player2Score.textContent = num1 + num2 + 2;
+    showDoubleSixMessage();
     player2TotalScore.textContent = "0";
   } else {
     player2Score.textContent = num1 + num2 + 2;
@@ -190,8 +192,40 @@ async function ai() {
     if (checkTotalScore()) {
       break;
     }
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+    await new Promise((resolve) => setTimeout(resolve, 2000));
     RollDiceFunc();
   }
   changePlayer();
+}
+
+function showDoubleSixMessage() {
+  const messageElement = document.createElement("div");
+  const gifImage = document.createElement("img");
+  messageElement.id = "message";
+  messageElement.textContent = "You got 6 and 6!";
+  messageElement.style.backgroundColor = "none";
+  messageElement.style.padding = "10px";
+  messageElement.style.position = "absolute";
+  messageElement.style.top = "20%";
+  messageElement.style.left = "50%";
+  messageElement.style.transform = "translate(-50%, -50%)";
+  messageElement.style.width = "300px";
+  messageElement.style.height = "150px";
+  messageElement.style.textAlign = "center";
+  messageElement.style.borderRadius = "5px";
+  messageElement.style.fontSize = "30px";
+  messageElement.style.color = "white";
+
+  gifImage.src = "images/giphy.gif";
+  gifImage.alt = "Double Six GIF";
+  gifImage.style.display = "block";
+  gifImage.style.margin = "0 auto";
+
+  messageElement.appendChild(gifImage);
+
+  document.body.appendChild(messageElement);
+
+  setTimeout(() => {
+    document.body.removeChild(messageElement);
+  }, 5000);
 }
