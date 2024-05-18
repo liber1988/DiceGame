@@ -4,13 +4,13 @@ Welcome to the Dice Game! This is a fun and interactive game built using JavaScr
 
 ## Demo
 
-Check out a small demo of the game [here](#).
+Check out a small demo of the game [https://candid-maamoul-f72068.netlify.app](#).
 
 ## Instructions
 
 Follow these simple steps to get started with the game:
 
-1. Download the starter images from [here](#).
+1. Download the starter images from [https://candid-maamoul-f72068.netlify.app](#).
 2. Clone this repository to your local machine.
 3. Open `index.html` in your web browser to start playing the game.
 
@@ -42,7 +42,7 @@ The game has 2 players, playing in rounds. The objective is to be the first play
 
 ## How to Play
 
-1. Open the game by launching `index.html` in your browser.
+1. Open the game by launching `https://candid-maamoul-f72068.netlify.app` in your browser.
 2. The game starts with Player 1's turn.
 3. Roll the dice by clicking the 'Roll Dice' button. The result will be displayed, and your round score will be updated.
 4. You can keep rolling the dice or choose to 'Hold' your current score by clicking the 'Hold' button.
@@ -84,10 +84,6 @@ The game has 2 players, playing in rounds. The objective is to be the first play
 ## Contributions
 
 Contributions are welcome! If you have any suggestions or improvements, feel free to create an issue or submit a pull request.
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 ## Acknowledgements
 
