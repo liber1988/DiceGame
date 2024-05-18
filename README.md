@@ -39,6 +39,8 @@ The game has 2 players, playing in rounds. The objective is to be the first play
 
 5. **New Game**:
    - Players can start a new game at any time by clicking the 'New Game' button.
+6. **AI**:
+   - You can played against AI as well if you are bored and do not have friend to play with.
 
 ## How to Play
 
