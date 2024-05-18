@@ -7,12 +7,15 @@
     <title>Dice Game</title>
   </head>
   <body>
+    <audio id="diceRollBackgroundMusic">
+      <source src="music/dice-roll.mp3" type="audio/mpeg" />
+    </audio>
     <div class="audio-icon">
       <audio id="backgroundMusic" loop>
         <source src="music/01 - Opening Theme.mp3" type="audio/mpeg" />
       </audio>
       <img
-        src="images/icons8-sound.gif"
+        src="images/sound-off.svg"
         alt="Sound Off"
         class="sound-icon"
         id="soundIcon"
@@ -62,7 +65,9 @@
       </div>
     </div>
     <div id="input-container">
-      <h1>Game Instructions:</h1>
+      <h1>
+        Game Instructions: <img src="images/dice.svg" class="dice-image" />
+      </h1>
       <ol>
         <li>
           In your turn roll the dice at list once and accumulate the result, in

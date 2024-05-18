@@ -8,7 +8,7 @@
 body {
   display: flex;
   flex-direction: row;
-  background-color: blanchedalmond;
+  background-color: rgb(255, 235, 205);
   font-family: Arial, Helvetica, sans-serif;
   justify-content: center;
 }
@@ -20,6 +20,8 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  border: 10px solid black;
+  border-radius: 15px;
 }
 .player-1 h1 {
   display: none;
@@ -32,6 +34,9 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  border: 10px solid black;
+  border-radius: 15px;
+  opacity: 0.6;
 }
 
 .player-2 h1 {
@@ -134,13 +139,14 @@ li {
 
 #input-container {
   background-color: #b8820f;
-  padding: 20px;
-  border-radius: 20px;
+  padding: 50px;
+  border-radius: 100px;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   opacity: 0.9;
+  border: 10px solid black;
 }
 
 #input-container.hidden {
@@ -183,5 +189,10 @@ ol {
   background-color: black;
   width: 30px;
   height: 30px;
-  background-color: aqua;
+  background-color: rgb(255, 235, 205);
+}
+
+.dice-image {
+  width: 150px;
+  height: 150px;
 }

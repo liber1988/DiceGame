@@ -21,11 +21,11 @@ let musicPlaying = false;
 function toggleSound() {
   if (musicPlaying) {
     backgroundMusic.pause();
-    soundIcon.src = "images/sound-off.gif";
+    soundIcon.src = "images/sound-off.svg";
     musicPlaying = false;
   } else {
     backgroundMusic.play();
-    soundIcon.src = "images/sound.gif";
+    soundIcon.src = "images/sound.svg";
     musicPlaying = true;
   }
 }
@@ -147,6 +147,15 @@ function updatePlayer2(num1, num2) {
 }
 
 function changePlayer() {
+  const player1 = document.getElementsByClassName("player-1");
+  const player2 = document.getElementsByClassName("player-2");
+  if (changePlayerValue) {
+    player1[0].style.opacity = 0.6;
+    player2[0].style.opacity = 1;
+  } else {
+    player1[0].style.opacity = 1;
+    player2[0].style.opacity = 0.6;
+  }
   changePlayerValue = !changePlayerValue;
   console.log(WINSCORE);
   return changePlayerValue;
@@ -154,6 +163,9 @@ function changePlayer() {
 
 changeDice.addEventListener("click", () => {
   const [num1, num2] = getRandomPictures();
+  const backgroundMusic = document.getElementById("diceRollBackgroundMusic");
+  backgroundMusic.play();
+
   if (changePlayerValue) {
     updatePlayer1(num1, num2);
     checkTotalScore();
