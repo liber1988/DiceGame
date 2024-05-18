@@ -165,3 +165,23 @@ li {
 ol {
   list-style-type: disc;
 }
+
+.sound-icon {
+  cursor: pointer;
+}
+.audio-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  background-color: lightblue;
+}
+
+.sound-icon {
+  cursor: pointer;
+  background-color: black;
+  width: 30px;
+  height: 30px;
+  background-color: aqua;
+}

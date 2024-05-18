@@ -14,6 +14,24 @@ const submitButton = document.getElementById("submit-button");
 const targetScoreInput = document.getElementById("number-input");
 const allButtons = document.querySelectorAll("button:not(#specialButton)");
 
+const backgroundMusic = document.getElementById("backgroundMusic");
+const soundIcon = document.getElementById("soundIcon");
+let musicPlaying = false;
+
+function toggleSound() {
+  if (musicPlaying) {
+    backgroundMusic.pause();
+    soundIcon.src = "images/sound-off.gif";
+    musicPlaying = false;
+  } else {
+    backgroundMusic.play();
+    soundIcon.src = "images/sound.gif";
+    musicPlaying = true;
+  }
+}
+
+soundIcon.addEventListener("click", toggleSound);
+
 function vanishCurrentScore() {
   const currentScore = document.getElementsByClassName("current-score");
   const currentScoreArray = Array.from(currentScore);

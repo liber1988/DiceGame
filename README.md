@@ -10,7 +10,7 @@ Check out a small demo of the game [https://candid-maamoul-f72068.netlify.app](#
 
 Follow these simple steps to get started with the game:
 
-1. Download the starter images from [https://candid-maamoul-f72068.netlify.app](#).
+1. Download the starter images from [https://github.com/liber1988/DiceGame/tree/main/images](#).
 2. Clone this repository to your local machine.
 3. Open `index.html` in your web browser to start playing the game.
 
