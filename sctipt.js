@@ -17,6 +17,7 @@ const backgroundMusic = document.getElementById("backgroundMusic");
 const soundIcon = document.getElementById("soundIcon");
 const buttons = document.querySelectorAll(".ripple");
 
+// making hovering affect on button ROLL DICE and HOLD
 buttons.forEach((button) => {
   button.addEventListener("click", function (e) {
     const x = e.clientX;
@@ -37,6 +38,7 @@ buttons.forEach((button) => {
     setTimeout(() => circle.remove(), 500);
   });
 });
+
 let musicPlaying = false;
 
 function toggleSound() {
@@ -97,6 +99,7 @@ function updateTargetScoreValue() {
 submitButton.addEventListener("click", () => {
   inputContainer.classList.add("hidden");
   updateTargetScoreValue();
+  toggleSound();
 });
 
 function getRandomPictures() {

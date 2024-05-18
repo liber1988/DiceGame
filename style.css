@@ -392,6 +392,7 @@ ol {
 
   ol {
     list-style-type: disc;
+    font-size: 10px;
   }
 
   .sound-icon {
